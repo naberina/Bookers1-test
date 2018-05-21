@@ -33,23 +33,21 @@ Bookers1-test
 
 ## Setup
 セットアップ方法、環境構築
-- ここから必要なものをインストールして環境を作成する
-- まずはnode.jsのインストール(puppeteerはnode.jsで起動しているため)
+- Node.jsが使用できる環境かチェック
 ```
-$ curl -sL https://deb.nodesource.com/setup_10.x | bash -
-$ apt-get install -y nodejs
+node -v
 ```
+	- バージョンが帰ってこなかった方は、以下の手順でnode.jsをインストールしてください
+	```
+	$ curl -sL https://deb.nodesource.com/setup_10.x | bash -
+	$ apt-get install -y nodejs
+	```
 
-- ビルドツールのインストール
-```
-apt-get install -y build-essential
-```
-
--  puppeteerのインストール
-```
-npm i puppeteer
-```
-ローカル環境でのセットアップは以上です。
+	- ビルドツールのインストール
+	```
+	apt-get install -y build-essential
+	```
+	ローカル環境でのセットアップは以上です。
 
 
 ## Usage
@@ -67,24 +65,13 @@ mkdir image
 $ rails s -d
 ```
 
-- 別タブでテスト実行コマンド
+- テストを実行する
 ```
 $ node bookers1-test.js
 ```
 
 - 正しくテストが実行できるとapp/image/テスト実行の画像が作成される
 
-
-#### Example
-使用例があれば記入
-
-
-#### Demo
-デモがあればわかりやすくGIFなどつける
-
-
-#### Install
-インストール方法
 
 
 ## Author
