@@ -56,14 +56,20 @@ npm i puppeteer
 - Code Commitのリポジトリbookers1のbookers.jsファイルを
 cloneしたアプリケーションのディレクトリに配置するapp/
 
-- railsでサーバーを立ち上げておく
+- app/image/テスト実行の画像を保存する
 ```
-$ rails s
+mkdir image
+```
+
+
+- railsでサーバーをデーモン立ち上げておく(裏側で起動させておく)
+```
+$ rails s -d
 ```
 
 - 別タブでテスト実行コマンド
 ```
-$ node bookers.js
+$ node bookers1-test.js
 ```
 
 - 正しくテストが実行できるとapp/image/テスト実行の画像が作成される
